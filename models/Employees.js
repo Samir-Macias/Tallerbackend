@@ -11,3 +11,4 @@ let schema = new Schema({
 
 let Employee = model(collection,schema)
 export default Employee
+
