@@ -1,3 +1,4 @@
+import "dotenv/config.js"
 import '../../config/database.js'
 import Store from '../Stores.js'
 
@@ -11,3 +12,5 @@ let stores = [
     {name: "Pet Paradise", address: "404 Furry Friend Street, Miami", phone: 5557893456},
     {name: "Gadget World", address: "505 Tech Park, San Francisco", phone: 5558904567}
 ];
+
+Store.insertMany(stores)

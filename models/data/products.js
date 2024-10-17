@@ -1,3 +1,4 @@
+import "dotenv/config.js"
 import '../../config/database.js'
 import Product from '../Products.js'
 
@@ -97,5 +98,27 @@ let products = [
     {name: "Golf Clubs Set", brand: "Sporty", type: "Sports", price: 1200},
     {name: "Treadmill", brand: "FitWear", type: "Fitness", price: 1500},
     {name: "Elliptical Machine", brand: "FitWear", type: "Fitness", price: 1300},
-    {name: "Dumbbell Set", brand: "FitWear", type: "Fitness", price: 200}
+    {name: "Dumbbell Set", brand: "FitWear", type: "Fitness", price: 200},
+    {name: "Electric Scooter", brand: "EcoRide", type: "Transport", price: 450},
+    {name: "Hoverboard", brand: "BalanceTech", type: "Transport", price: 300},
+    {name: "Electric Bike", brand: "RideMax", type: "Transport", price: 850},
+    {name: "VR Headset", brand: "VirtualWorld", type: "Electronics", price: 350},
+    {name: "Drone", brand: "SkyTech", type: "Electronics", price: 600},
+    {name: "Action Camera", brand: "AdventureCam", type: "Electronics", price: 250},
+    {name: "Wireless Charger", brand: "PowerPlus", type: "Accessories", price: 50},
+    {name: "Bluetooth Speaker", brand: "SoundBlaster", type: "Accessories", price: 150},
+    {name: "Electric Toothbrush", brand: "DentalCare", type: "Health", price: 80},
+    {name: "Hair Dryer", brand: "BeautyPro", type: "Personal Care", price: 120},
+    {name: "Smart Mirror", brand: "SmartHome", type: "Home", price: 350},
+    {name: "Robot Vacuum", brand: "CleanBot", type: "Home", price: 500},
+    {name: "Smart Doorbell", brand: "SafeHome", type: "Home", price: 200},
+    {name: "Noise-Canceling Headphones", brand: "SilentSound", type: "Accessories", price: 300},
+    {name: "LED Desk Lamp", brand: "BrightTech", type: "Home", price: 70},
+    {name: "Air Fryer", brand: "HealthCook", type: "Appliances", price: 180},
+    {name: "Smart Refrigerator", brand: "CoolTech", type: "Appliances", price: 2000},
+    {name: "Espresso Machine", brand: "BrewMaster", type: "Appliances", price: 500},
+    {name: "Yoga Mat", brand: "FitZone", type: "Fitness", price: 50},
+    {name: "Adjustable Dumbbells", brand: "FitWear", type: "Fitness", price: 400}
 ];
+
+Product.insertMany(products)

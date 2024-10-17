@@ -4,7 +4,7 @@ let collection = 'employees'
 let schema = new Schema({
     name:{type:String,required:true},
     post:{type:String,required:true},
-    salary:{Number:String,required:true}
+    salary:{type:Number,required:true}
 },{
     timestamps:true
 })

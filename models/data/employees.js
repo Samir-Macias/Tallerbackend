@@ -1,3 +1,4 @@
+import "dotenv/config.js"
 import '../../config/database.js'
 import Employee from '../Employees.js'
 
@@ -23,3 +24,5 @@ let employees = [
     {name: "Zoe Evans", post: "HR", salary: 52000},
     {name: "Lucas Carter", post: "Designer", salary: 50000}
 ];
+
+Employee.insertMany(employees)
