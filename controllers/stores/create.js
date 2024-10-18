@@ -1,6 +1,6 @@
 import Store from "../../models/Stores.js";
 
-let createEst = async (req, res) => {
+let createEst = async (req, res, next) => {
 
     try {
         let store = req.body
@@ -10,14 +10,12 @@ let createEst = async (req, res) => {
         })
 
     } catch (error) {
-        return res.status(500).json({
-            response: error
-        })
+      next(error)
     }
 
 }
 
-let createEstall = async (req, res) => {
+let createEstall = async (req, res,next) => {
 
     try {
         let store = req.body
@@ -27,9 +25,7 @@ let createEstall = async (req, res) => {
         })
 
     } catch (error) {
-        return res.status(500).json({
-            response: error
-        })
+        next(error)
     }
 
 }

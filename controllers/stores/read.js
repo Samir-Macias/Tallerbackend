@@ -1,47 +1,41 @@
 import Store from "../../models/Stores.js";
 
-let allStores = async (req,res) => {
+let allStores = async (req, res, next) => {
     try {
         let all = await Store.find()
         return res.status(200).json({
-            response:all
+            response: all
         })
     } catch (error) {
-       return response.status(500).json({
-        response: error
-       }) 
+        next(error)
     }
 
 }
 
-let nameStores = async (req,res) => {
+let nameStores = async (req, res, next) => {
     try {
         let nameQuery = req.params.nameEst
-        let name = await Store.find({name: nameQuery})
+        let name = await Store.find({ name: nameQuery })
         return res.status(200).json({
-            response:name
+            response: name
         })
     } catch (error) {
-       return response.status(500).json({
-        response: error
-       }) 
+        next(error)
     }
 
 }
 
-let addressStores = async (req,res) => {
+let addressStores = async (req, res, next) => {
     try {
         let addressQuery = req.params.addressEst
-        let address = await Store.find({address: addressQuery})
+        let address = await Store.find({ address: addressQuery })
         return res.status(200).json({
-            response:address
+            response: address
         })
     } catch (error) {
-       return response.status(500).json({
-        response: error
-       }) 
+        next(error)
     }
 
 }
 
-export {allStores, addressStores, nameStores} 
+export { allStores, addressStores, nameStores } 

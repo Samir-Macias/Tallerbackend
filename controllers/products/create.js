@@ -1,6 +1,6 @@
 import Product from "../../models/Products.js";
 
-let createPro = async (req, res) => {
+let createPro = async (req, res,next) => {
 
     try {
 
@@ -11,14 +11,12 @@ let createPro = async (req, res) => {
         })
 
     } catch (error) {
-        return res.status(500).json({
-            response: error
-        })
+        next(error)
     }
 
 }
 
-let createProall = async (req, res) => {
+let createProall = async (req, res,next) => {
 
     try {
 
@@ -29,9 +27,7 @@ let createProall = async (req, res) => {
         })
 
     } catch (error) {
-        return res.status(500).json({
-            response: error
-        })
+        next(error)
     }
 
 }

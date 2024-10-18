@@ -1,6 +1,6 @@
 import Employee from "../../models/Employees.js";
 
-let createEmp = async (req, res) => {
+let createEmp = async (req, res,next) => {
 
     try {
 
@@ -11,14 +11,12 @@ let createEmp = async (req, res) => {
         })
 
     } catch (error) {
-        return res.status(500).json({
-            response: error
-        })
+        next(error)
     }
 
 }
 
-let createEmpall = async (req, res) => {
+let createEmpall = async (req, res,next) => {
 
     try {
 
@@ -29,9 +27,7 @@ let createEmpall = async (req, res) => {
         })
 
     } catch (error) {
-        return res.status(500).json({
-            response: error
-        })
+        next(error)
     }
 
 }
